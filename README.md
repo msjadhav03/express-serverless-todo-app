@@ -3,9 +3,8 @@
 # Prerequisites
 
 - You need an Amazon Web Services account to get started.
-- Python and JavaScript/Typescript are popular programming languages for serverless. You will see these most frequently in examples, tutorials, and workshops.
-- Java, C#, Go, Ruby, and PowerShell are available runtimes, but you can also bring your own.
-Set up your development environment with your preferred local IDE
+- JavaScript/Typescript are popular programming languages for serverless. 
+- Set up your development environment with your preferred local IDE
 - AWS data centers are organized into one or more Availability Zones located in multiple regions across the globe
 - Region codes and ARNs (Amazon Resource Names) are used to identify and connect to specific AWS services and resources
 - Responsibility for security of serverless solutions is shared between you and AWS.
