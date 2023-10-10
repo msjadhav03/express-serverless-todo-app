@@ -81,9 +81,13 @@ aws configure
 ```
 - Some basic commands
     - To get S3 list
-    ```js aws s3 ls```
+    ```js 
+    aws s3 ls
+    ```
     - To invoke lamda function
-    ```js aws lambda invoke --function-name customHandler-dev response_output.txt```
+    ```js 
+    aws lambda invoke --function-name customHandler-dev response_output.txt
+    ```
 
 
 # AWS API Gateway
