@@ -12,6 +12,7 @@ Set up your development environment with your preferred local IDE
 
 
 # Introduction
+
 - Needs of Serverless architecture
     1. a computing service
     2. Database Service
@@ -36,6 +37,7 @@ Set up your development environment with your preferred local IDE
 
 
 # AWS Lambda
+
 - Compute Service, runs code, response to events, managages compute resources.
 - Runs code without provising and managing.
 - AWS Lambda create functions, self-contained applications written in one of the supported languages and runtimes.
@@ -46,16 +48,19 @@ Set up your development environment with your preferred local IDE
 - Support small tests.
 
 # How AWS Lamda works ?
-- function runs in its own container. 
-- function creation -> packaging into new container -> executing conatiner -> allocating RAM and CPU -> Once done -> deallocate assigned resources
+
+- Function runs in its own container. 
+- `Function creation -> packaging into new container -> executing conatiner -> allocating RAM and CPU -> Once done -> deallocate assigned resources`
 - Cost = RAM * amount of time
 
 # Benefits of AWS Lamda
+
 - Full managed
 - Pay as per go
 - Automatic Scaling
 
 # AWS S3
+
 - Simple Storage Service. 
 - They need to have their space provisioned ahead of a time.
 - S3 buckets needs unique name globally.
@@ -64,6 +69,7 @@ Set up your development environment with your preferred local IDE
 - It has ability to share objects publicly.
 
 # AWS IAM
+
 - Indentity Access Management
 - Provides Security
 - It has Roles, Users, Policies, Groups.
@@ -72,9 +78,10 @@ Set up your development environment with your preferred local IDE
 
 
 # AWS CLI
-- Command Line interface to access AWS services
-- CLI uses API keys to handle authentication
-- configure AWS CLI
+
+- Command Line interface to access AWS services.
+- CLI uses API keys to handle authentication.
+- Configure AWS CLI.
 ```js 
 aws configure
 // provide required configurations i.e. access key and secrete Key
@@ -91,6 +98,7 @@ aws configure
 
 
 # AWS API Gateway
+
 -  AWS API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
 - act as the "front door" for applications to access data, business logic, or functionality from your backend services.
 - securing REST, HTTP, and WebSocket APIs
@@ -99,10 +107,12 @@ aws configure
 - CloudTrail logging and monitoring of API usage and API changes.
 
 # AWS CloudFront
-- it is used for global deployment, and setting up many HTTP features.
+
+- It is used for global deployment, and setting up many HTTP features.
 
 # Creating Lamda function using serverless framework
- Install Serverless Framework on your machine
+
+Install Serverless Framework on your machine
 ```js
 npm install serverless -g
 ```
