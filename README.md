@@ -77,6 +77,36 @@ Set up your development environment with your preferred local IDE
 - Allows auditing of user login and policy usage.
 
 
+# AWS API Gateway
+
+-  AWS API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
+- act as the "front door" for applications to access data, business logic, or functionality from your backend services.
+- securing REST, HTTP, and WebSocket APIs
+- Support for stateful (WebSocket) and stateless (HTTP and REST) APIs.
+- Support for custom domain names.
+- CloudTrail logging and monitoring of API usage and API changes.
+
+# AWS CloudFront
+
+- It is used for global deployment, and setting up many HTTP features.
+
+# AWS Route 53
+- Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. 
+- Reserve Domain names, update DNS and monitor websites.
+- Amazon Route 53 helps to make that connection between domain names and IP addresses.
+- `How does it works?`
+
+    1. A user opens a web browser, enters www.example.com in the address bar, and presses Enter.
+    2. The request for www.example.com is routed to a DNS resolver, which is typically managed by the user's internet service provider (ISP), such as a cable internet provider, a DSL broadband provider, or a corporate network.
+    3. The DNS resolver for the ISP forwards the request for www.example.com to a DNS root name server.
+    4. The DNS resolver forwards the request for www.example.com again, this time to one of the TLD name servers for .com domains. The name server for .com domains responds to the request with the names of the four Route 53 name servers that are associated with the example.com domain.
+    5. The DNS resolver caches (stores) the four Route 53 name servers. The next time someone browses to example.com, the resolver skips steps 3 and 4 because it already has the name servers for example.com. The name servers are typically cached for two days.
+    6. The DNS resolver chooses a Route 53 name server and forwards the request for www.example.com to that name server.
+    7. The Route 53 name server looks in the example.com hosted zone for the www.example.com record, gets the associated value, such as the IP address for a web server, 192.0.2.44, and returns the IP address to the DNS resolver.
+    8. The DNS resolver finally has the IP address that the user needs. The resolver returns that value to the web browser.
+    9. The web browser sends a request for www.example.com to the IP address that it got from the DNS resolver. This is where your content is, for example, a web server running on an Amazon EC2 instance or an Amazon S3 bucket that's configured as a website endpoint.
+    10. The web server or other resource at 192.0.2.44 returns the web page for www.example.com to the web browser, and the web browser displays the page.
+
 # AWS CLI
 
 - Command Line interface to access AWS services.
@@ -96,19 +126,6 @@ aws configure
     aws lambda invoke --function-name customHandler-dev response_output.txt
     ```
 
-
-# AWS API Gateway
-
--  AWS API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
-- act as the "front door" for applications to access data, business logic, or functionality from your backend services.
-- securing REST, HTTP, and WebSocket APIs
-- Support for stateful (WebSocket) and stateless (HTTP and REST) APIs.
-- Support for custom domain names.
-- CloudTrail logging and monitoring of API usage and API changes.
-
-# AWS CloudFront
-
-- It is used for global deployment, and setting up many HTTP features.
 
 # Creating Lamda function using serverless framework
 
