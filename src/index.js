@@ -9,12 +9,13 @@ const app = express();
  */
 app.get("/", (req, res) => {
   try{
-    console.log(JSON.parse(req.body))
     return res.status(200).json(data);
   }catch(error){
+    console.log(error)
     return res.status(500).json({
       "statusCode" : 500,
-      "message" :"Internal Server Error"
+      "message" :"Internal Server Error",
+      "error":error
     });
   }
   
@@ -25,7 +26,7 @@ app.get("/", (req, res) => {
  * This function is responsible for adding data to do list
  * post(req,res) : req represent request Object, res: represent response Object
  */
-app.post("/", (req, res,next) => {
+app.post("/", (req, res) => {
   try{
     data.push(JSON.parse(req.body));
     return res.status(200).json(data);
@@ -44,20 +45,22 @@ app.post("/", (req, res,next) => {
  * This function is responsible for fetching specific item from to do list
  * get(req,res) : req represent request body, res: represent response body
  */
-app.get("/:id", (req, res,next) => {
+app.get("/:id", (req, res) => {
   try{
      let result;
      for(let i = 0;i<data.length;i++){
-        if(data[i]["itemId"] === JSON.parse(req.params.id).itemId && result != null)  
+        if(data[i]["itemId"] == req.params.id && result == null)  
         {
           result = data[i]
+          break;
         }
       }
     return res.status(200).json(result);
   }catch(error){
     return res.status(500).json({
       "statusCode" : 500,
-      "message" :"Internal Server Error"
+      "message" :"Internal Server Error",
+      "error":error
     });
   }
  
@@ -68,10 +71,10 @@ app.get("/:id", (req, res,next) => {
  * This function is responsible for deleting specific item from to do list
  * delete(req,res) : req represent request Object, res: represent response Object
  */
-app.delete("/:id", (req, res,next) => {
+app.delete("/:id", (req, res) => {
   try{
     for(let i = 0;i<data.length;i++){
-        if(data[i]["itemId"] === JSON.parse(req.params.id).itemId)  
+        if(data[i]["itemId"] == req.params.id)  
         {
           data.splice(i,1)
           break;
@@ -81,7 +84,8 @@ app.delete("/:id", (req, res,next) => {
   }catch(error){
     return res.status(500).json({
       "statusCode" : 500,
-      "message" :"Internal Server Error"
+      "message" :"Internal Server Error",
+      "error":error
     });
   }
 });
@@ -91,20 +95,25 @@ app.delete("/:id", (req, res,next) => {
  * This function is responsible for updating specific item from to do list
  * delete(req,res) : req represent request Object, res: represent response Object
  */
-app.patch("/:id", (req, res,next) => {
+app.patch("/:id", (req, res) => {
   try{
+    console.log("REquest Came here")
     let result;
-      data.forEach(element => {
-          if(element["itemId"] === JSON.parse(req.params.id) && result != null){
-          element["itemName"] === JSON.parse(req.body).itemName
-          result = element
+    for(let i = 0;i < data.length;i++){
+      console.log(data[i])
+        if(data[i]["itemId"] == req.params.id){
+          console.log(data)
+          data[i]["itemName"] == req.body.itemName
+          result = data[i]
         }
-      });
+      }
       return res.status(200).json(result);
-  }catch(error){
+
+    }catch(error){
     return res.status(500).json({
       "statusCode" : 500,
-      "message" :"Internal Server Error"
+      "message" :"Internal Server Error",
+      "error":error
     });
   }
   
@@ -115,16 +124,16 @@ app.patch("/:id", (req, res,next) => {
  * This function is responsible for updating specific item from to do list
  * delete(req,res) : req represent request Object, res: represent response Object
  */
-app.use((req, res,next) => {
+app.use((req, res) => {
   try{
-    console.log(JSON.parse(req.body))
     return res.status(404).json({
       error: "Not Found",
     });
   }catch(error){
     return res.status(500).json({
       "statusCode" : 500,
-      "message" :"Internal Server Error"
+      "message" :"Internal Server Error",
+      "error":error
     });
   }
  

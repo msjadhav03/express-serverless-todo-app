@@ -140,3 +140,20 @@ npm install serverless -g
 serverless
 // Provide required specification
 ```
+
+# Deploying Serverless Application over AWS
+Use below command to deploy code on AWS. Navigate to root folder of application.
+```js
+sls deploy
+```
+
+# Running Serverless app Locally
+- Installing required pulgins
+```js
+serverless plugin install -n serverless-offline
+```
+- Running Locally 
+```js
+serverless offline
+```
+

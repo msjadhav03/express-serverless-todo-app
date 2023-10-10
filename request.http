@@ -1,25 +1,25 @@
-# POST https://wy75n7lbha.execute-api.us-east-1.amazonaws.com
-# content-type: application/json
-
-# {
-#     "itemId":2,
-#     "itemName":"Pencil"
-# }
-
-GET https://wy75n7lbha.execute-api.us-east-1.amazonaws.com
 
 
-# GET https://wy75n7lbha.execute-api.us-east-1.amazonaws.com/1
+# Localhost API CALL
 
-# DELETE https://wy75n7lbha.execute-api.us-east-1.amazonaws.com/1
+POST http://localhost:3000
+content-type: application/json
 
-# PATCH https://wy75n7lbha.execute-api.us-east-1.amazonaws.com/2
-# content-type: application/json
+{
+    "itemId":2,
+    "itemName":"Python"
+}
 
-# {
-#     "itemName":"Book"
-# }
+PATCH https://wy75n7lbha.execute-api.us-east-1.amazonaws.com/1
+content-type: application/json
 
+{
+    "itemName":"Book"
+}
 
+GET http://localhost:3000/2
 
+GET http://localhost:3000
+
+DELETE http://localhost:3000/1
 
