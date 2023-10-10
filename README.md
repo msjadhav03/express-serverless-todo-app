@@ -105,6 +105,7 @@
     8. The DNS resolver finally has the IP address that the user needs. The resolver returns that value to the web browser.
     9. The web browser sends a request for www.example.com to the IP address that it got from the DNS resolver. This is where your content is, for example, a web server running on an Amazon EC2 instance or an Amazon S3 bucket that's configured as a website endpoint.
     10. The web server or other resource at 192.0.2.44 returns the web page for www.example.com to the web browser, and the web browser displays the page.
+# AWS SNS
 
 # AWS CLI
 
@@ -126,10 +127,16 @@ aws configure
     ```
 
 
-# Creating Lamda function using serverless framework
+# Installing Serverless framework
 
 Install Serverless Framework on your machine
+
 ```js
 npm install serverless -g
 ```
+# Creating Serverless express application
 
+```js
+serverless
+// Provide required specification
+```

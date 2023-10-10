@@ -1,0 +1,25 @@
+# POST https://wy75n7lbha.execute-api.us-east-1.amazonaws.com
+# content-type: application/json
+
+# {
+#     "itemId":2,
+#     "itemName":"Pencil"
+# }
+
+GET https://wy75n7lbha.execute-api.us-east-1.amazonaws.com
+
+
+# GET https://wy75n7lbha.execute-api.us-east-1.amazonaws.com/1
+
+# DELETE https://wy75n7lbha.execute-api.us-east-1.amazonaws.com/1
+
+# PATCH https://wy75n7lbha.execute-api.us-east-1.amazonaws.com/2
+# content-type: application/json
+
+# {
+#     "itemName":"Book"
+# }
+
+
+
+
