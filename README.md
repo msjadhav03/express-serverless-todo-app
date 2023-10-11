@@ -110,7 +110,7 @@
 
 - Command Line interface to access AWS Service. 🔧️ 🖥️
 - CLI uses API keys to handle authentication.
-- Configure AWS CLI.
+- Configure 🛠️ AWS CLI.
 ```js 
 aws configure
 // provide required configurations i.e. access key and secrete Key
@@ -128,7 +128,7 @@ aws configure
 
 # Installing Serverless framework
 
-Install Serverless Framework on your machine
+Install Serverless Framework on your machine 🖥️
 
 ```js
 npm install serverless -g
@@ -140,14 +140,14 @@ serverless
 // Provide required specification
 ```
 
-# Deploying Serverless Application over AWS
-Use below command to deploy code on AWS. Navigate to root folder of application.
+# Deploying Serverless Application over AWS 
+Use below command to deploy code on AWS. Navigate to root folder 📂️ of application.
 ```js
 sls deploy
 ```
 
 # Running Serverless app Locally
-- Installing required pulgins
+- Installing required plugins 📌️
 ```js
 serverless plugin install -n serverless-offline
 ```
@@ -156,7 +156,8 @@ serverless plugin install -n serverless-offline
 serverless offline
 ```
 
-# Removing your Service. 🔧️Navigate Service. 🔧️folder and use below command.
+# Removing your Service. 
+Navigate to Service folder 📂️  and use below command.
 ```js
 sls remove
 ```
