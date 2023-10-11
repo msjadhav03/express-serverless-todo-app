@@ -1,4 +1,4 @@
-# Serverless Development Node.js and AWS 🖥️
+# Serverless Framework : Node.js and AWS 🖥️
 
 # Prerequisites
 
