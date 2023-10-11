@@ -157,3 +157,9 @@ serverless plugin install -n serverless-offline
 serverless offline
 ```
 
+# Removing your service
+Navigate Service folder and use below command.
+```js
+sls remove
+```
+
